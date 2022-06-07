@@ -1,0 +1,48 @@
+.template_section{
+    background-color: rgb(238, 238, 238);
+    padding-bottom: 30px;
+    padding-top: 17px;
+}
+
+.template_top{
+    margin-left: 180px;
+    margin-right: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.template_body{
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.card_image{
+    box-sizing: border-box;
+    height: 160px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid rgb(238, 238, 238);
+}
+
+.card_image:hover{
+    border: 2px solid rgb(196, 196, 196);
+}
+
+.card_title{
+    font-size: 14px;
+    margin-top: 2px;
+    color: rgb(104, 103, 103);
+    font-weight: 500 ;
+}
