@@ -1,12 +1,13 @@
 # follow these steps after downloading
 
-## open the directory
-_(if yoou opened correcct directory, it'll have folder src, folder public, .gitignore etc etc) _.\
+1.open the directory
+_(correcct directory will have folders src, public, .gitignore file etc etc) _.\
 
-## npm install
-## npm start
+in terminal type and enter
+2. npm install
+3. npm start
 
-###refresh the page after clicking blank form to go to that page
+note: refresh the page after clicking blank form to go to form page
 
 
 
