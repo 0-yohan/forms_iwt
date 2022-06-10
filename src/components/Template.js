@@ -1,6 +1,6 @@
 import React from "react";
 import "./Template.css";
-import blank from "C:\\Users\\Lenovo\\Desktop\\google forms\\forms\\src\\images\\blank.jpg";
+import blank from "../images/blank.jpg";
 import uuid from "react-uuid";
 import { useHistory } from "react-router-dom";
 
