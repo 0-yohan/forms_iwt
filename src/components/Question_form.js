@@ -55,7 +55,7 @@ import SaveIcon from "@material-ui/icons/Save";
 import { useStateValue } from './StateProvider'
 import { actionTypes } from './reducer'
 import { useParams } from "react-router";
-// import axios from "axios";
+import axios from "axios";
 
 function Question_form() {
     const [{}, dispatch] = useStateValue();
@@ -83,80 +83,79 @@ function Question_form() {
     setQuestions([...questions, newQuestion]);
   }, []);
 
-  //    useEffect(()=>{
-  //     async function data_adding(){
-  //       var request = await axios.get(`http://localhost:9000/data/${id}`);
-  //       console.log("sudeep")
-  //       var question_data=request.data.questions;
-  //       console.log(question_data)
-  //       var doc_name=request.data.document_name
-  //       var doc_descip = request.data.doc_desc
-  //       console.log(doc_name+" "+doc_descip)
-  //       setDocName(doc_name)
-  //       setDocDesc(doc_descip)
-  //       setQuestions( question_data)
-  //       dispatch({
-  //         type: actionTypes.SET_DOC_NAME,
-  //         doc_name: doc_name
+     useEffect(()=>{
+      async function data_adding(){
+        var request = await axios.get(`http://localhost:9000/data/${id}`);
+        console.log("sudeep")
+        var question_data=request.data.questions;
+        console.log(question_data)
+        var doc_name=request.data.document_name
+        var doc_descip = request.data.doc_desc
+        console.log(doc_name+" "+doc_descip)
+        setDocName(doc_name)
+        setDocDesc(doc_descip)
+        setQuestions( question_data)
+        dispatch({
+          type: actionTypes.SET_DOC_NAME,
+          doc_name: doc_name
 
-  //      })
+       })
 
-  //       dispatch({
-  //         type: actionTypes.SET_DOC_DESC,
-  //         doc_desc: doc_descip
+        dispatch({
+          type: actionTypes.SET_DOC_DESC,
+          doc_desc: doc_descip
 
-  //    })
-  //       dispatch({
-  //           type: actionTypes.SET_QUESTIONS,
-  //           questions:question_data
+     })
+        dispatch({
+            type: actionTypes.SET_QUESTIONS,
+            questions:question_data
 
-  //        })
-  //     }
+         })
+      }
 
-  //     data_adding()
-  //     },[])
+      data_adding()
+      },[])
 
-  //     function changeType(e){
-  //       // dispatch({
-  //       //   type:"CHANGE_TYPE",
-  //       //   questionType:e.target.id
-  //       // })
-  //       setType(e.target.id)
+      function changeType(e){
+        // dispatch({
+        //   type:"CHANGE_TYPE",
+        //   questionType:e.target.id
+        // })
+        setType(e.target.id)
 
-  //     }
+      }
 
-  //     useEffect(()=>{
-  //       setType(questionType)
-  //      },[changeType])
+      useEffect(()=>{
+        setType(questionType)
+       },[changeType])
 
-  //     function saveQuestions(){
-  //         console.log("auto saving questions initiated");
-  //         var data = {
-  //           formId: "1256",
-  //           name: "My-new_file",
-  //           description: "first file",
-  //           questions: questions
-  //         }
+      function saveQuestions(){
+          console.log("auto saving questions initiated");
+          var data = {
+            formId: "1256",
+            name: "My-new_file",
+            description: "first file",
+            questions: questions
+          }
 
-  //         setQuestions(questions)
+          setQuestions(questions)
 
-  //       }
+        }
 
-  //       function commitToDB(){
-  //         console.log(questions);
-  //         dispatch({
-  //           type: actionTypes.SET_QUESTIONS,
-  //            questions:questions
+        function commitToDB(){
+          dispatch({
+            type: actionTypes.SET_QUESTIONS,
+             questions:questions
 
-  //          })
+           })
 
-  //          axios.post(`http://localhost:9000/add_questions/${id}`,{
-  //           "document_name": documentName,
-  //           "doc_desc": documentDescription,
-  //           "questions": questions,
+           axios.post(`http://localhost:9000/add_questions/${id}`,{
+            "document_name": documentName,
+            "doc_desc": documentDescription,
+            "questions": questions,
 
-  //         })
-  //       }
+          })
+        }
 
   function addMoreQuestionField() {
     expandCloseAll(); //I AM GOD
@@ -827,7 +826,7 @@ function Question_form() {
           </DragDropContext>
 
           <div className="save_form">
-            {/* <Button variant="contained" color="primary" onClick={commitToDB} style={{fontSize:"14px"}}>Save</Button> */}
+            <Button variant="contained" color="primary" onClick={commitToDB} style={{fontSize:"14px"}}>Save</Button>
           </div>
         </div>
       </div>

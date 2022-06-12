@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../images/logo.png";
 import IconButton from "@material-ui/core/IconButton";
-import { FiSettings } from "react-icons/fi";
+import { FiStar, FiSettings } from "react-icons/fi";
 import { AiOutlineEye } from "react-icons/ai"
 import { IoMdFolderOpen } from "react-icons/io"
 import Button from "@material-ui/core/Button";
@@ -9,17 +9,29 @@ import ColorLensIcon from "@material-ui/icons/ColorLens";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import Avatar from "@material-ui/core/Avatar";
 import "./Formheader.css";
+import { useStateValue } from "./StateProvider";
+import { useHistory } from 'react-router-dom';
+
 
 function Formheader(){
-    return(
+        const history = useHistory();
+        const [{doc_name}, dispatch] = useStateValue();
+
+
+        function navigates(){
+            history.push("/response")
+        }
+        return(
         <div className="form_header">
             <div className="form_header_left">
                 <a href="http://localhost:3000/"><img src={logo} alt="forms" style={{height:"30px", width:"30px", paddingLeft:"10px"}}/></a>
-                <input type="text" placeholder="Untitled form" className="form_name"></input>
-                
+                <input type="text" placeholder="Untitled form" className="form_name" value={doc_name}></input>
+                <IoMdFolderOpen className="form_header_icon" style={{ marginRight:"10px"}}></IoMdFolderOpen>
+                <FiStar className="form_header_icon" style={{ marginRight:"10px"}}/>
+                <span style={{fontSize:"12px",fontWeight:"600",color:""}}>All changes saved in Drive</span>
             </div>
             <div className="form_header_right">
-                <IconButton>
+                <IconButton onClick={navigates}>
                     <AiOutlineEye className="form_header_icon"/>
                 </IconButton>
                 <IconButton>

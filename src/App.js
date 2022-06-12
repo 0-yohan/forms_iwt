@@ -7,6 +7,9 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Formheader from "./components/Formheader"
 import Centeredtabs from "./components/Tabs";
 import Question_form from "./components/Question_form";
+import User_form from "./components/Userform";
+import SubmitForm from './components/QuestionPaper';
+
 
 function App() {
   return (
@@ -17,7 +20,15 @@ function App() {
           <Route path="/form/:id" >
               <Formheader />
               <Centeredtabs/>
-              <Question_form/>
+              {/* <Question_form/> */}
+          </Route>
+          
+          <Route path="/submitted">
+                 <SubmitForm />
+          </Route>
+
+          <Route path="/response">
+            <User_form/>
           </Route>
 
           <Route exact path="/" >

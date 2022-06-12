@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import StorageIcon from "@material-ui/icons/Storage";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import FolderOpenIcon from "@material-ui/icons/FolderOpen";
@@ -6,8 +6,36 @@ import IconButton from "@material-ui/core/IconButton";
 import "./Mainbody.css"
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import doc_img from "../images/blank.jpg";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import Card from "./Card" 
+
+
 
 function Mainbody(){
+    // const history= useHistory();
+    const [files,setFiles]=useState([]);
+
+
+    useEffect(() => {
+        async function filenames(){
+            
+            var request = await axios.get("http://localhost:9000/get_all_files")
+            let files = request.data;
+            // filesn.forEach((file)=>{
+            //     var id_=file.split(".")
+            //     async function data(){
+            //         var req = await axios.get(`http://localhost:9000/data/${id_[0]}`);
+            //          console.log(req.data.document_name)                    
+            //     }
+            //     data()
+            // })
+            setFiles(files)
+           
+        }
+        filenames()
+        
+    },[])
     return(
         <div className="mainbody">
             <div className="mainbody_top">
@@ -25,19 +53,12 @@ function Mainbody(){
                 </div>
             </div>
             <div className="mainbody_docs">
-                <div className="doc_card">
-                    <img src={doc_img} alt="prev forms" className="doc_image" />
-                    <div className="doc_card_content">
-                        <h5>Form XYZ</h5>
-                        <div className="doc_content" >
-                            <div className="content_left">
-                              <StorageIcon style={{color: "white", fontSize:"12px", backgroundColor: "rgb(104, 103, 103)", 
-                              padding: "3px", marginRight: "3px", borderRadius: "2px"}}/>
-                            </div>
-                            <MoreVertIcon style={{fontSize:"16px", color:"grey"}}/>
-                        </div>
-                    </div> 
-                </div>
+                 {
+                    files.map((ele)=>(
+                        <Card name={ele}/>
+                    ))            
+                 }
+                 <Card />   
             </div>
             </div>
         );
