@@ -25,7 +25,7 @@ function SubmitForm() {
                     <br></br>
                     <Typography style={{fontSize:"13px",fontWeight:"400"}} >Your response has been recorded.</Typography>
                     <br></br>
-<a href="#" style={{fontSize:"13px"}}>Submit another response</a>
+<a href="http://localhost:3000/response" style={{fontSize:"13px"}}>Submit another response</a>
                 </div>
             <div className="user_footer" style={{marginTop:"10px", marginBottom:"0px", textAlign:"center", fontSize:"medium", fontWeight:"500"}}>
                 foRms
