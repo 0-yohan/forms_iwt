@@ -20,8 +20,8 @@
 .question_form_top_name{
     box-sizing: border-box;
     font-family: 'Google Sans', Roboto, Arial, sans-serif;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
     line-height: 40px;
     line-height: 135%;
     width: 100%;
@@ -29,8 +29,8 @@
     outline: none;
     border-bottom: 1px solid #f6f6f6;
     color: black;
-    height: 20px;
-    padding: 15px 0;
+    height: auto;
+    /* padding: 15px 0; */
 }
 
 /* shdshdkshd */

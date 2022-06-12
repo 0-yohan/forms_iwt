@@ -802,7 +802,7 @@ function Question_form() {
                 }}
               ></input>
               <input
-                type="text"
+                type="textarea"
                 className="question_form_top_desc"
                 placeholder={documentDescription}
                 value={documentDescription}
@@ -826,7 +826,7 @@ function Question_form() {
           </DragDropContext>
 
           <div className="save_form">
-            <Button variant="contained" color="primary" onClick={commitToDB} style={{fontSize:"14px"}}>Save</Button>
+            <Button variant="contained" color="primary" onClick={commitToDB} style={{fontSize:"14px", marginTop:"10px"}}>Save</Button>
           </div>
         </div>
       </div>

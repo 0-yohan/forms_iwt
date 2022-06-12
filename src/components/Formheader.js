@@ -26,9 +26,6 @@ function Formheader(){
             <div className="form_header_left">
                 <a href="http://localhost:3000/"><img src={logo} alt="forms" style={{height:"30px", width:"30px", paddingLeft:"10px"}}/></a>
                 <input type="text" placeholder="Untitled form" className="form_name" value={doc_name}></input>
-                <IoMdFolderOpen className="form_header_icon" style={{ marginRight:"10px"}}></IoMdFolderOpen>
-                <FiStar className="form_header_icon" style={{ marginRight:"10px"}}/>
-                <span style={{fontSize:"12px",fontWeight:"600",color:""}}>All changes saved in Drive</span>
             </div>
             <div className="form_header_right">
                 <IconButton onClick={navigates}>

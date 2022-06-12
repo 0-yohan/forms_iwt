@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     
   },
   tab:{
-    fontSize:12,
+    fontSize:15,
     color:"#5f6368",
     textTransform:"capitalize",
     height:10,
@@ -90,7 +90,7 @@ export default function CenteredTabs() {
 
       </Tabs>
       <TabPanel value={value} index={0}>
-        <Question_form />
+      <Question_form />
         
          
       </TabPanel>
@@ -103,7 +103,7 @@ export default function CenteredTabs() {
           
                     <div className="user_form_questions" style={{display:"flex",flexDirection:"column",marginBottom:"20px"}}>
                       <div style={{display:"flex",flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
-                    <Typography  style={{fontSize:"15px",fontWeight:"400",letterSpacing: '.1px',lineHeight:'24px',paddingBottom:"8px",fontSize:"24px"}} >3 Responses</Typography>
+                    <Typography  style={{fontSize:"15px",fontWeight:"400",letterSpacing: '.1px',lineHeight:'20px',paddingBottom:"8px",fontSize:"24px"}} > Responses</Typography>
                     <div  ><IconButton>
                     <MoreVertIcon className="form_header_icon" />
                 </IconButton>
@@ -121,7 +121,7 @@ export default function CenteredTabs() {
       
        
             <div className="user_footer">
-                Google Forms
+                foRms
             </div>
             </div>
             

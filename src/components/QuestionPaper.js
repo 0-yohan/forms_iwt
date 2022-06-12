@@ -27,6 +27,9 @@ function SubmitForm() {
                     <br></br>
 <a href="#" style={{fontSize:"13px"}}>Submit another response</a>
                 </div>
+            <div className="user_footer" style={{marginTop:"10px", marginBottom:"0px", textAlign:"center", fontSize:"medium", fontWeight:"500"}}>
+                foRms
+            </div>
         </div>
         </div>
         </div>
