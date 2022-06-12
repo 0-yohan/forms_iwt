@@ -6,8 +6,10 @@
 In terminal type and enter\
 2. npm install \
 3. npm start \
-4. go to this directory ...\
-C:\Users\Lenovo\Desktop\google forms\forms\src\backend> node app.js
+  go to this directory ...\
+C:\Users\Lenovo\Desktop\google forms\forms\src\backend> \
+4. npm install exceljs \
+5. node app.js
 
 note: refresh the page after clicking blank form to go to form page
 
