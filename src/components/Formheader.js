@@ -14,14 +14,11 @@ function Formheader(){
     return(
         <div className="form_header">
             <div className="form_header_left">
-                <img src={logo} alt="forms" style={{height:"30px", width:"30px", paddingLeft:"10px"}}/>
-                <input type="text" placeholfer="Untitled form" className="form_name"></input>
-                <IoMdFolderOpen className="form_header_icon" style={{marginRight:"10px"}}/>
+                <a href="http://localhost:3000/"><img src={logo} alt="forms" style={{height:"30px", width:"30px", paddingLeft:"10px"}}/></a>
+                <input type="text" placeholder="Untitled form" className="form_name"></input>
+                
             </div>
             <div className="form_header_right">
-                <IconButton>
-                    <ColorLensIcon size="small" className="form_header_icon"/>
-                </IconButton>
                 <IconButton>
                     <AiOutlineEye className="form_header_icon"/>
                 </IconButton>

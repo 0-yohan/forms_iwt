@@ -5,7 +5,7 @@ import FolderOpenIcon from "@material-ui/icons/FolderOpen";
 import IconButton from "@material-ui/core/IconButton";
 import "./Mainbody.css"
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import doc_img from "C:\\Users\\Lenovo\\Desktop\\google forms\\forms\\src\\images\\blank.jpg";
+import doc_img from "../images/blank.jpg";
 
 function Mainbody(){
     return(
