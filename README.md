@@ -1,3 +1,17 @@
+# follow these steps after downloading
+
+1.open the directory \
+(correct directory will have folders src, public, .gitignore file etc etc) 
+
+In terminal type and enter\
+2. npm install \
+3. npm start 
+
+note: refresh the page after clicking blank form to go to form page
+
+
+
+--------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
